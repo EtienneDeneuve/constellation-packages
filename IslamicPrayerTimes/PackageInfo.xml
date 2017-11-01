@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Package xmlns="http://schemas.myconstellation.io/Constellation/1.8/PackageManifest"
+         Name="IslamicPrayTimes"
+         Version="1.1"
+         Author="Etienne Deneuve"
+         URL="http://etienne.deneuve.xyz"
+         Description="Islamic Pray Time Copyright ©  2017"
+         EnableControlHub="false">
+  <Compatibility constellationVersion="1.8" dotNetTargetPlatform="net45">
+    <Platforms>
+      <Platform id="Win32NT" isCompliant="true" />
+      <Platform id="Unix" isCompliant="true" />
+    </Platforms>
+  </Compatibility>
+  <Settings>
+    <Setting description="Methode pour le calcul (Jafari = 0; Karachi = 1; ISNA = 2; MWL = 3; Makkah = 4; Egypt = 5; Custom = 6; Tehran = 7; Morocco = 8; Malaysia = 9;
+)" type="Int32" name="CalcMethod"  defaultValue="3" />
+    <Setting description="Methode pour le calcul de l'Asr (Shafii: 0, Hanafi: 1) " type="Int32" name="AsrMethod"   defaultValue="0"/>
+    <!-- For the next iteration, or if someone need more specific parameters
+    <Setting description="Interval en millisecondes" type="Int32" name="FajrAngle"   defaultValue=""/>
+    <Setting description="Interval en millisecondes" type="Int32" name="MaghribAngle" defaultValue=""/>
+    <Setting description="Interval en millisecondes" type="Int32" name="IshaAngle" defaultValue=""/>
+    <Setting description="Interval en millisecondes" type="Int32" name="IsmakMinutes" defaultValue=""/>
+    <Setting description="Interval en millisecondes" type="Int32" name="IsmakAngle" defaultValue=""/>
+    <Setting description="Interval en millisecondes" type="Int32" name="IsmakAngle" defaultValue=""/>
+    <Setting description="Interval en millisecondes" type="Int32" name="DhuhrMinutes" defaultValue=""/>
+    <Setting description="Interval en millisecondes" type="Int32" name="MaghribMinutes" defaultValue=""/>
+    <Setting description="Interval en millisecondes" type="Int32" name="IshaMinutes" defaultValue=""/>
+    <Setting description="Interval en millisecondes" type="Int32" name="CustomParams" defaultValue=""/>
+    <Setting description="Interval en millisecondes" type="Int32" name="TimeOffsets" defaultValue=""/>
+    <Setting description="Interval en millisecondes" type="Int32" name="HighLatsMethod" defaultValue=""/>
+    <Setting description="Interval en millisecondes" type="Int32" name="timeFormat" defaultValue=""/>
+    -->
+    <Setting description="Latitude de votre domicile" type="Double" name="latitude" defaultValue="2.269692"/>
+    <Setting description="longitude de votre domicile" type="Double" name="longitude" defaultValue="48.807341"/>
+    <Setting name="Interval" type="Int32" defaultValue="3600000" description="Interval en millisecondes toutes les heures par defaut" />
+  </Settings>
+</Package>
+
