@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrayTime", "PrayTime.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IslamicPrayTime", "..\ConstellationPackageConsole1\IslamicPrayTime.csproj", "{9D410583-D5E3-469F-8BF2-34FAD41DA46E}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "IslamicPrayTime Package", "IslamicPrayTime Package", "{C5CACC78-A901-4A15-85B1-3DC8D6D15DAE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,6 +26,10 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{1C6D65F5-BC68-414D-9ED9-A0420016B95B} = {C5CACC78-A901-4A15-85B1-3DC8D6D15DAE}
+		{9D410583-D5E3-469F-8BF2-34FAD41DA46E} = {C5CACC78-A901-4A15-85B1-3DC8D6D15DAE}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3CEFE831-881A-46AE-B68C-4BA6FFEAE926}
