@@ -5,12 +5,12 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{4468984A-014C-4175-A57B-64C45E69740B}</ProjectGuid>
+    <ProjectGuid>{35095118-0FA5-412C-8134-CEBEA7E5B125}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>IslamicPrayerTimes</RootNamespace>
-    <AssemblyName>IslamicPrayerTimes</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <RootNamespace>SonyBravia</RootNamespace>
+    <AssemblyName>SonyBravia</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -21,7 +21,6 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DocumentationFile>bin\Debug\IslamicPrayerTimes.XML</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -30,9 +29,11 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DocumentationFile>bin\Release\IslamicPrayerTimes.XML</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="BraviaIRCCControl, Version=1.0.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\BraviaIRCCControl.1.0.2\lib\net45\BraviaIRCCControl.dll</HintPath>
+    </Reference>
     <Reference Include="Constellation.Common, Version=1.8.0.0, Culture=neutral, PublicKeyToken=324a4f45ff674ee1, processorArchitecture=MSIL">
       <HintPath>..\packages\Constellation.1.8.3.17258\lib\net45\Constellation.Common.dll</HintPath>
     </Reference>
@@ -52,17 +53,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IslamicPrayTimeSo.cs" />
-    <Compile Include="MyConstellation.generated.cs" />
-    <Compile Include="PrayTime.cs" />
+    <Compile Include="BraviaConfig.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
-    <None Include="packages.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="bravia.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="PackageInfo.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -70,11 +76,7 @@
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <ProjectExtensions>
     <VisualStudio>
-<<<<<<< HEAD:IslamicPrayerTimes/IslamicPrayerTimes.csproj
-      <UserProperties PackagesSelection="&lt;ArrayOfTupleOfstringstring xmlns:i=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns=&quot;http://schemas.datacontract.org/2004/07/System&quot;&gt;&lt;TupleOfstringstring&gt;&lt;m_Item1&gt;DESKTOP-1ESJC3M&lt;/m_Item1&gt;&lt;m_Item2&gt;IslamicPrayTimes&lt;/m_Item2&gt;&lt;/TupleOfstringstring&gt;&lt;/ArrayOfTupleOfstringstring&gt;" />
-=======
-      <UserProperties PublishServer="http://192.168.1.50:8088" PublishMethod="ConstellationServer" />
->>>>>>> 1a1531c53a9537cc78ddf4235a9d85513419a195:VigilanceMeteoFrance/VigilanceMeteoFrance/VigilanceMeteoFrance.csproj
+      <UserProperties PublishMethod="ConstellationServer" PublishServer="http://163.172.185.123:8088" />
     </VisualStudio>
   </ProjectExtensions>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

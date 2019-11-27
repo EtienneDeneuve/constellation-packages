@@ -1,0 +1,15 @@
+[submodule "NetAtmo/NetAtmoBot"]
+	path = NetAtmo/NetAtmoBot
+	url = https://github.com/sebastienwarin/NetatmoBot.git
+[submodule "Vera/VeraNet"]
+	path = Vera/VeraNet
+	url = https://github.com/sebastienwarin/VeraNet
+[submodule "xbmc/xbmcnet"]
+	path = xbmc/xbmcnet
+	url = https://github.com/sebastienwarin/xbmc.git
+[submodule "Mikrotik/tik4net"]
+	path = Mikrotik/tik4net
+	url = https://github.com/sebastienwarin/tik4net
+[submodule "HWMonitor/LibreHardwareMonitor"]
+	path = HWMonitor/LibreHardwareMonitor
+	url = https://github.com/LibreHardwareMonitor/LibreHardwareMonitor

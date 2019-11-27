@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Package xmlns="http://schemas.myconstellation.io/Constellation/1.8/PackageManifest"
+         Name="PrixCarburants"
+         Version="2.1"
+         Author="Aurélien Chevalier, Romain ODDONE"
+         URL="https://aurelienchevalier.fr"
+         Description="Obtenir les prix du carburant depuis prix-carburants.gouv.fr"
+         Icon="petrol-pump-icon.png"
+         EnableControlHub="false">
+  <Compatibility constellationVersion="1.8" dotNetTargetPlatform="net45">
+    <Platforms>
+      <Platform id="Win32NT" isCompliant="true" />
+      <Platform id="Unix" isCompliant="true" />
+    </Platforms>
+  </Compatibility>
+  <Settings>
+    <Setting name="station-ids" type="String" description="ID of the gas stations (separated by commas)" isRequired="false" />
+    <Setting name="interval" type="Int32" description="Refresh interval (in hours)" isRequired="false" defaultValue="6" />
+    <Setting name="longitude" type="Double" description="Longitude of the place you want to get the prices" isRequired="false" defaultValue="" />
+    <Setting name="latitude" type="Double" description="Latitude of the place you want to get the prices" isRequired="false" defaultValue="" />
+    <Setting name="range" type="Int32" description="Range (in meters) around the place you want to get the prices" isRequired="false" defaultValue="1000" />
+    <Setting name="cheapest-fuel-types" type="String" description="Types of the cheapest fuel to find within the specified coordinates and range (possible values : Gazole, SP95, SP98, GPLc, E10, E85, separated by commas)" />
+  </Settings>
+</Package>
