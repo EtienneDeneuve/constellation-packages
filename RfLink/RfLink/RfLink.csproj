@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{4468984A-014C-4175-A57B-64C45E69740B}</ProjectGuid>
+    <ProjectGuid>{A0F503B9-83BC-47AF-8BA8-4CCA392CF311}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>IslamicPrayerTimes</RootNamespace>
-    <AssemblyName>IslamicPrayerTimes</AssemblyName>
+    <RootNamespace>RfLink</RootNamespace>
+    <AssemblyName>RfLink</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -21,7 +21,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DocumentationFile>bin\Debug\IslamicPrayerTimes.XML</DocumentationFile>
+    <DocumentationFile>bin\Debug\RfLink.XML</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -30,7 +30,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DocumentationFile>bin\Release\IslamicPrayerTimes.XML</DocumentationFile>
+    <DocumentationFile>bin\Release\RfLink.XML</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Constellation.Common, Version=1.8.0.0, Culture=neutral, PublicKeyToken=324a4f45ff674ee1, processorArchitecture=MSIL">
@@ -52,14 +52,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IslamicPrayTimeSo.cs" />
-    <Compile Include="MyConstellation.generated.cs" />
-    <Compile Include="PrayTime.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ProtocolParser.cs" />
+    <Compile Include="RFLinkClient.cs" />
+    <Compile Include="RFLinkSettings.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
@@ -70,11 +72,7 @@
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <ProjectExtensions>
     <VisualStudio>
-<<<<<<< HEAD:IslamicPrayerTimes/IslamicPrayerTimes.csproj
-      <UserProperties PackagesSelection="&lt;ArrayOfTupleOfstringstring xmlns:i=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns=&quot;http://schemas.datacontract.org/2004/07/System&quot;&gt;&lt;TupleOfstringstring&gt;&lt;m_Item1&gt;DESKTOP-1ESJC3M&lt;/m_Item1&gt;&lt;m_Item2&gt;IslamicPrayTimes&lt;/m_Item2&gt;&lt;/TupleOfstringstring&gt;&lt;/ArrayOfTupleOfstringstring&gt;" />
-=======
-      <UserProperties PublishServer="http://192.168.1.50:8088" PublishMethod="ConstellationServer" />
->>>>>>> 1a1531c53a9537cc78ddf4235a9d85513419a195:VigilanceMeteoFrance/VigilanceMeteoFrance/VigilanceMeteoFrance.csproj
+      <UserProperties PublishServer="http://109.20.177.209:8088" PublishMethod="ConstellationServer" />
     </VisualStudio>
   </ProjectExtensions>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

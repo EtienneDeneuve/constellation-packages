@@ -5,12 +5,12 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{4468984A-014C-4175-A57B-64C45E69740B}</ProjectGuid>
+    <ProjectGuid>{01047B02-C958-4A15-9057-725594C51E42}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>IslamicPrayerTimes</RootNamespace>
-    <AssemblyName>IslamicPrayerTimes</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <RootNamespace>PrixCarburants</RootNamespace>
+    <AssemblyName>PrixCarburants</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -21,7 +21,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DocumentationFile>bin\Debug\IslamicPrayerTimes.XML</DocumentationFile>
+    <DocumentationFile>bin\Debug\PrixCarburants.XML</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -30,21 +30,23 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DocumentationFile>bin\Release\IslamicPrayerTimes.XML</DocumentationFile>
+    <DocumentationFile>bin\Release\PrixCarburants.XML</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Constellation.Common, Version=1.8.0.0, Culture=neutral, PublicKeyToken=324a4f45ff674ee1, processorArchitecture=MSIL">
       <HintPath>..\packages\Constellation.1.8.3.17258\lib\net45\Constellation.Common.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.AspNet.SignalR.Client, Version=2.2.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.AspNet.SignalR.Client.2.2.2\lib\net45\Microsoft.AspNet.SignalR.Client.dll</HintPath>
+    <Reference Include="Microsoft.AspNet.SignalR.Client, Version=2.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.SignalR.Client.2.3.0\lib\net45\Microsoft.AspNet.SignalR.Client.dll</HintPath>
     </Reference>
-    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.IO.Compression.FileSystem" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -52,29 +54,36 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IslamicPrayTimeSo.cs" />
-    <Compile Include="MyConstellation.generated.cs" />
-    <Compile Include="PrayTime.cs" />
+    <Compile Include="Models\Schedule.cs" />
+    <Compile Include="Models\Fuel.cs" />
+    <Compile Include="Models\Price.cs" />
+    <Compile Include="Models\SchedulesList.cs" />
+    <Compile Include="Models\Services.cs" />
+    <Compile Include="Models\Station.cs" />
+    <Compile Include="Models\StationsList.cs" />
+    <Compile Include="Models\Time.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="PackageInfo.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="petrol-pump-icon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <ProjectExtensions>
     <VisualStudio>
-<<<<<<< HEAD:IslamicPrayerTimes/IslamicPrayerTimes.csproj
-      <UserProperties PackagesSelection="&lt;ArrayOfTupleOfstringstring xmlns:i=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns=&quot;http://schemas.datacontract.org/2004/07/System&quot;&gt;&lt;TupleOfstringstring&gt;&lt;m_Item1&gt;DESKTOP-1ESJC3M&lt;/m_Item1&gt;&lt;m_Item2&gt;IslamicPrayTimes&lt;/m_Item2&gt;&lt;/TupleOfstringstring&gt;&lt;/ArrayOfTupleOfstringstring&gt;" />
-=======
-      <UserProperties PublishServer="http://192.168.1.50:8088" PublishMethod="ConstellationServer" />
->>>>>>> 1a1531c53a9537cc78ddf4235a9d85513419a195:VigilanceMeteoFrance/VigilanceMeteoFrance/VigilanceMeteoFrance.csproj
+      <UserProperties PublishPath="C:\Users\Funigtor\Desktop\Temp Projet Delete Me 30 Juin" PublishMethod="LocalFile" PackageName="PrixCarburants2.zip" />
     </VisualStudio>
   </ProjectExtensions>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
